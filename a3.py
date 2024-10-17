@@ -218,6 +218,14 @@ def title_by_actor(matches: List[str]) -> List[str]:
 def bye_action(dummy: List[str]) -> None:
     raise KeyboardInterrupt
 
+def get_year_by_title(matches: List[str]) -> List[int]: 
+    title = matches[0]
+    result = []
+    for movie in movie_db:
+        if title == get_title(movie):
+            result.append(get_year(movie))
+    print(result)
+    return result 
 
 # The pattern-action list for the natural language query system A list of tuples of
 # pattern and action It must be declared here, after all of the function definitions
@@ -234,6 +242,7 @@ pa_list: List[Tuple[List[str], Callable[[List[str]], List[Any]]]] = [
     (str.split("who acted in %"), actors_by_title),
     (str.split("when was % made"), year_by_title),
     (str.split("in what movies did % appear"), title_by_actor),
+    (str.split("when was % made"), get_year_by_title)
     (["bye"], bye_action),
 ]
 

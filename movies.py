@@ -435,4 +435,23 @@ movie_db: List[Tuple[str, str, int, List[str]]] = [
             "spike lee",
         ],
     ),
+    (
+        "Reservoir Dogs",
+        "Quentin Tarantino",
+        1992
+        [
+            "Harvey Keitel",
+            "Tim Roth",
+            "Michael Madsen",
+            "Chris Penn",
+            "Steve Buscemi",
+            "Lawrence Tierney",
+            "Randy Brooks",
+            "Kirk Baltz",
+            "Edward Bunker",
+            "Quentin Tarantino",
+            "Rich Turner",
+            "David Steen",
+        ]
+    )
 ]
